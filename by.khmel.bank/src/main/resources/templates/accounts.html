@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Accounts</title>
+</head>
+<body>
+<div th:align="center" th:each="account : ${accountsList}">
+    <a th:href="@{/{id}/clients/{idC}/accounts/{idAc}(id=${id}, idC=${idC}, idAc=${account.id})}" th:text="${account.getId()+ ', '+account.getAmount()+', '+account.getCurrency()}">User </a>
+
+<!--    th:href="@{/{id}/clients/{idC}/accounts/{idAc}(idC=${account.getClient().getId()}, id=${id}, idAc=account.getId())}"-->
+</div>
+
+<br>
+<hr>
+<br>
+<div th:align="center">
+    <a th:href="@{/{id}/clients/{idC}/accounts/newAccount(id=${id}, idC=${idC})}">Add account</a>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Editing</title>
+</head>
+<body>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<form th:align="center" th:method="PATCH" th:action="@{/{id}/clients/{idC}/editClient(id=${id}, idC=${idC})}" th:object="${client}">
+    <label for="fname">New first name: </label>
+    <input type="text" th:field="*{firstName}" id="fname">
+    <br/>
+    <label for="sname">New last name: </label>
+    <input type="text" th:field="*{lastName}" id="sname">
+    <br/>
+    <label for="addres">New address: </label>
+    <input type="text" th:field="*{address}" id="addres">
+    <br/>
+    <label for="phone">New phone number: </label>
+    <input type="text" th:field="*{phoneNumber}" id="phone">
+    <br/>
+    <label for="email">New email: </label>
+    <input type="text" th:field="*{email}" id="email">
+    <br/>
+    <input type="submit" value="Update!"/>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Editing</title>
+</head>
+<body>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<form th:align="center" th:method="PATCH" th:action="@{/{id}/edit(id=${bank.getId()})}" th:object="${bank}">
+    <label for="text">New bank name: </label>
+    <input type="text" th:field="*{name}" id="text">
+    <br/>
+    <input type="submit" value="Update!"/>
+
+</form>
+</body>
+</html>

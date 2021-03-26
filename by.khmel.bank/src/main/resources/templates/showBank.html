@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank page</title>
+</head>
+<body>
+<h2 th:align="center" th:text="${bank.getName()}"></h2>
+<!--<p th:text="${bank.getId()}">value</p>-->
+<!--<p th:text="${bank.getName()}">value</p>-->
+
+
+<div th:align="center">
+
+    <br>
+    <a th:href="@{/{id}/clients(id=${bank.getId()})}">Clients</a>
+    <a th:href="@{/{id}/workers(id=${bank.getId()})}">Workers</a>
+    <br>
+    <br>
+    <a th:href="@{/{id}/edit(id=${bank.getId()})}">Edit</a>
+    <br>
+    <br>
+
+</div>
+
+
+
+<form th:align="center" th:method="DELETE" th:action="@{/{id}(id=${bank.getId()})}">
+    <input type="submit" value="Delete"/>
+</form>
+</body>
+</html>

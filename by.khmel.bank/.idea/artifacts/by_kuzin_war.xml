@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="by.kuzin:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>by.kuzin</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="com.devcolibri.dataexam-1.0.war">
+      <element id="artifact" artifact-name="by.kuzin:war exploded" />
+    </root>
+  </artifact>
+</component>

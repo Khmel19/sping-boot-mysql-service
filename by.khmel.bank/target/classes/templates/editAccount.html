@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Editing</title>
+</head>
+<body>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<form th:align="center" th:method="PATCH" th:action="@{/{id}/clients/{idC}/accounts/{idAc}/editAccount(id=${id}, idC=${idC}, idAc=${idAc})}" th:object="${account}">
+    <label for="currency">New currency: </label>
+    <input type="text" th:field="*{currency}" id="currency">
+    <br/>
+    <label for="amount">New amount: </label>
+    <input type="text" th:field="*{amount}" id="amount">
+    <br/>
+    <label for="amountOfCredit">New amount of credit: </label>
+    <input type="text" th:field="*{amountOfCredit}" id="amountOfCredit">
+    <br/>
+    <br/>
+    <input type="submit" value="Update!"/>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Account page</title>
+</head>
+<body>
+<div th:align="center">
+    <p th:text="'Amount: '+${account.getAmount()}">value</p>
+    <p th:text="'Credit: '+${account.getAmountOfCredit()}">value</p>
+    <p th:text="'Currency: '+${account.getCurrency()}">value</p>
+    <br>
+    <a th:href="@{/{id}/clients/{idC}/accounts/{idAc}/editAccount(id=${account.getClient().getBank().getId()},idC=${account.getClient().getId()},idAc=${account.getId()})}">Edit</a>
+
+</div>
+
+
+
+
+
+<br>
+<!--<a th:href="@{/{id}/clients/{idC}/accounts(id=${client.getBank().getId()}, idC=${client.getId()})}">Accounts</a>-->
+
+
+<form th:align="center" th:method="DELETE" th:action="@{/{id}/clients/{idC}/accounts/{idAc}(id=${account.getClient().getBank().getId()},idC=${account.getClient().getId()},idAc=${account.getId()})}">
+    <input type="submit" value="Delete"/>
+</form>
+</body>
+</html>

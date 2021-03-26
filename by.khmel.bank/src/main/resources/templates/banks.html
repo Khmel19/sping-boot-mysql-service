@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All banks</title>
+</head>
+<body>
+<h1 th:align="center">BANKS</h1>
+<div th:align="center" th:each="bank : ${banks}">
+    <a th:href="@{/{id}(id=${bank.getId()})}" th:text="${bank.getName()}">User </a>
+
+</div>
+
+<br>
+<hr>
+<br>
+<div th:align="center">
+    <a href="/newBank">Create new bank</a>
+</div>
+
+
+</body>
+</html>
